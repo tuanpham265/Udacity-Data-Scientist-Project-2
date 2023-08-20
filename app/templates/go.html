@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Classification Result</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="page-header">
+        <h1 class="text-center">Disaster Response Classification</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Original Message:</h3>
+            <p>{{ query }}</p>
+            <h3>Classification Categories:</h3>
+            <ul>
+                {% for category, label in classification_labels.items() %}
+                    <li>{{ category }} : {{ label }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <a href="/" class="btn btn-primary">Back to Home</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
